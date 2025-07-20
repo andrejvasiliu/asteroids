@@ -23,6 +23,7 @@ Screen height: {SCREEN_HEIGHT}""")
                 return
         pygame.Surface.fill(screen, (0, 0, 0))  # Fill the screen with black
         player.draw(screen)  # Draw the player
+        player.update(dt)
         pygame.display.flip()  # Update the display
         dt = clock.tick(60)/1000
 
