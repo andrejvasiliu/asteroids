@@ -48,6 +48,12 @@ def main():
             if asteroid.collides_with(player):
                 print("Game over!")
                 return False
+        for asteroid in asteroids:
+            for shot in shots:
+                if asteroid.collides_with(shot):
+                    asteroid.split()
+                    shot.kill()
+                    break
         dt = clock.tick(60)/1000
 
 
